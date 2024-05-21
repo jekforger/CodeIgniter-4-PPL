@@ -2,14 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome to CodeIgniter 4!</title>
+    <title>Data Barang</title>
     <meta name="description" content="The small framework with powerful features">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="/favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-
-    <!-- STYLES -->
 
     <style {csp-style-nonce}>
         * {
@@ -206,39 +204,42 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            height: 100vh; /* Menggunakan tinggi viewport agar bisa rata tengah secara vertikal */
-            padding: 0 15px; /* Menambahkan ruang padding di sisi kanan dan kiri */
+            height: 100vh;
+            padding: 0 15px; 
         }
         .col {
-            width: 100%; /* Mengisi lebar */
-            max-width: 800px; /* Menetapkan lebar maksimum */
-            padding: 20px; /* Menambahkan ruang padding di atas dan bawah */
-            box-sizing: border-box; /* Memastikan padding tidak menambah lebar elemen */
+            width: 100%;
+            max-width: 800px;
+            padding: 20px; 
+            box-sizing: border-box; 
         }
         .table {
-            background-color: #ffffff;
+            background-color: #ffffff; 
             border-collapse: collapse;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             width: 100%;
         }
-        .table th{
-            border: 1px solid #dddddd;
+        .table th {
+            border: 1px solid #577B8D;
             padding: 10px;
             text-align: center;
-            text-decoration: #fff;
-            background-color: grey;
+            color: #fff; 
+            background-color: #577B8D; 
         }
         .table td {
-            background-color: #fff;
             text-align: left;
             border: 1px solid #dddddd;
             padding: 10px;
         }
         .table-striped tbody tr:nth-of-type(odd) {
-            background-color: #f7f7f7;
+            background-color: #dde5eb; 
+        }
+        .table-striped tbody tr:nth-of-type(even) {
+            background-color: #577B8D;
+            color: #fff; 
         }
         .table-hover tbody tr:hover {
-            background-color: #f2f2f2;
+            background-color: #577B8D;
         }
         .btn {
             cursor: pointer;
@@ -309,9 +310,9 @@
             <li class="menu-toggle">
                 <button id="menuToggle">&#9776;</button>
             </li>
-            <li class="menu-item hidden"><a href="/">Home</a></li>
-            <li class="menu-item hidden"><a href="https://codeigniter.com/user_guide/" target="_blank">Info</a>
-            </li>
+            <li class="menu-item hidden"><a href="/logout">Logout</a></li>
+            <li class="menu-item hidden"><a href="/display">Home</a></li>
+            <li class="menu-item hidden"><a href="/info">Info</a></li>
             <li class="menu-item hidden"><a href="/Barang">Barang</a></li>
             <li class="menu-item hidden"><a href="validation">Validation</a></li>
         </ul>
@@ -341,11 +342,10 @@
                 <td><?= $brg['Kode']; ?></td>
                 <td><?= $brg['Nama_Barang']; ?></td>
                 <td><?= $brg['Harga']; ?></td>
-                <td><img src="<?= base_url('path/to/upload/directory/' . $brg['Foto']); ?>" width="100" height="100"></td>
-                <!-- Ganti 'path/to/upload/directory/' dengan lokasi sesuai dengan struktur direktori proyek Anda -->
+                <td><img src="<?= base_url('path/to/upload/directory/'.$brg['Foto']) ?>" alt="Foto" width="100" height="100"></td>
                 <td>
                     <a href="/barang/view/<?= $brg['Kode']; ?>" class="btn btn-view">View</a>
-                    <a href="/barang/delete/<?= $brg['Kode']; ?>" class="btn btn-delete" onclick="return confirmDelete()">Delete</a>
+                    <a href="/barang/delete/<?= $brg['id']; ?>" class="btn btn-delete">Delete</a>
                     <a href="/barang/edit/<?= $brg['id']; ?>" class="btn btn-update">Edit</a>
                 </td>
             </tr>
@@ -373,7 +373,7 @@
 
     <div class="copyrights">
 
-        <p>&copy; <?= date('Y') ?> Fahrizal Mudzaki Maulana.
+        <p>&copy; <?= date('Y') ?> Fahrizal Mudzaqi Maulana.
             </p>
 
     </div>

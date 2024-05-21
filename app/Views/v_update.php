@@ -252,16 +252,14 @@
 
 </header>
 
-
-<!-- FOOTER: DEBUG INFO + COPYRIGHTS -->
 <h1>Update Barang</h1>
     <?php if ($data_barang): ?>
-        <form id="updateForm" method="POST" action="/barang/update/<?= $data_barang['id'] ?>" enctype="multipart/form-data">
+        <form id="updateForm" method="POST" action="<?= site_url('barang/update/' . $data_barang['id']) ?>" enctype="multipart/form-data">
         <label for="ID">ID</label>
-        <input type="text" id="ID" name="id" value="<?= $data_barang['id'] ?>" readonly>
+        <input type="text" id="ID" name="id" value="<?= $data_barang['id'] ?>">
 
         <label for="Kode">Kode</label>
-        <input type="text" id="Kode" name="Kode" value="<?= $data_barang['Kode'] ?>" readonly>
+        <input type="text" id="Kode" name="Kode" value="<?= $data_barang['Kode'] ?>">
         
         <label for="Nama_Barang">Nama Barang</label>
         <input type="text" id="Nama_Barang" name="Nama_Barang" value="<?= $data_barang['Nama_Barang'] ?>">
@@ -292,7 +290,7 @@
 
     <div class="copyrights">
 
-        <p>&copy; <?= date('Y') ?> Fahrizal Mudzaki Maulana.
+        <p>&copy; <?= date('Y') ?> Fahrizal Mudzaqi Maulana.
             </p>
 
     </div>

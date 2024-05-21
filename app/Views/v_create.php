@@ -287,7 +287,9 @@
         <td><input type="text" class="form-control" id="Harga" name="Harga" value="<?= old('Harga') ?>"></td>
       </tr>
       <tr>
-        <th><label for="Foto" class="form-label">Foto</label></th>  <td><input type="file" id="Foto" name="Foto"></td>  </tr>
+        <th><label for="Foto" class="form-label">Foto</label></th>  
+        <td><input type="file" id="Foto" name="Foto"></td>  
+      </tr>
     </table>
 
     <div class="text-center mt-4 button-margin">
@@ -309,7 +311,7 @@
 
     <div class="copyrights">
 
-        <p>&copy; <?= date('Y') ?> Fahrizal Mudzaki Maulana.
+        <p>&copy; <?= date('Y') ?> Fahrizal Mudzaqi Maulana.
             </p>
 
     </div>

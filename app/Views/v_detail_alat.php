@@ -272,6 +272,11 @@
                     <th scope="row">Harga</th>
                     <td><?php echo $data_barang['Harga']; ?></td>
                 </tr>
+                <tr>
+                <th scope="row">Foto</th>
+                    <td><img src="<?= base_url('path/to/upload/directory/' . $data_barang['Foto']); ?>" alt="Foto" width="100" height="100"></td>
+                </tr>
+
             </tbody>
         </table>
     </div>
@@ -288,7 +293,7 @@
 
     <div class="copyrights">
 
-        <p>&copy; <?= date('Y') ?> Fahrizal Mudzaki Maulana.
+        <p>&copy; <?= date('Y') ?> Fahrizal Mudzaqi Maulana.
             </p>
 
     </div>

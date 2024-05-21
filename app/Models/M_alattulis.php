@@ -21,9 +21,10 @@ class M_alattulis extends Model
 
     public function updateBarang($id, $data)
     {
-        $builder = $this->db->table($this->table);
-        $builder->where('id', $id);
-        return $builder->update($data);
+        return $this->update($id, $data);
+        // $builder = $this->db->table($this->table);
+        // $builder->where('id', $id);
+        // return $builder->update($data);
     }
 
     public function createBarang($data)
